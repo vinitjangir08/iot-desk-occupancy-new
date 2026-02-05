@@ -1,64 +1,107 @@
-body{
-margin:0;
-font-family:Segoe UI;
-background:#eef2f7;
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(120deg, #fdfbfb, #ebedee);
+  color: #222;
 }
 
-/* header */
-header{
-background:linear-gradient(135deg,#0f4c75,#3282b8);
-color:white;
-padding:25px;
-text-align:center;
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3, #f6d365);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-/* navbar */
-nav{
-background:#1b262c;
-padding:15px;
-text-align:center;
-}
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
-}
-nav a:hover{
-color:#00d4ff;
+header h1 {
+  margin: 0;
+  font-size: 40px;
 }
 
-/* cards */
-.container{
-padding:40px;
-text-align:center;
+header p {
+  font-size: 18px;
+  opacity: 0.9;
 }
 
-.card{
-background:white;
-padding:25px;
-margin:20px auto;
-width:80%;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+/* NAVBAR */
+nav {
+  background: #111;
+  padding: 14px;
+  text-align: center;
 }
 
-.status-box{
-font-size:45px;
-padding:40px;
-width:320px;
-margin:auto;
-border-radius:12px;
-color:white;
+nav a {
+  color: #ddd;
+  margin: 0 16px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.occupied{background:#e63946;}
-.empty{background:#2a9d8f;}
+nav a:hover {
+  color: #f107a3;
+}
 
-footer{
-background:#1b262c;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
+/* CONTAINERS */
+.container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* CARDS */
+.card {
+  background: linear-gradient(135deg, #ffffff, #f9f9ff);
+  padding: 30px;
+  margin: 25px auto;
+  width: 85%;
+  max-width: 900px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* DASHBOARD STATUS */
+.status-box {
+  font-size: 48px;
+  padding: 45px;
+  width: 320px;
+  margin: auto;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.occupied {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.empty {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.info {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* LISTS */
+ul {
+  text-align: left;
+  display: inline-block;
+  font-size: 17px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 18px;
+  margin-top: 50px;
 }
