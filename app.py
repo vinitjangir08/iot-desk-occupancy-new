@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
-desk_status = "Empty"
+status = "Empty"
 
 @app.route("/")
 def home():
@@ -25,11 +25,16 @@ def team():
     return render_template("team.html")
 
 @app.route("/status")
-def status():
-    global desk_status
-    desk_status = "Occupied" if desk_status == "Empty" else "Empty"
+def get_status():
+    global status
+    status = "Occupied" if status == "Empty" else "Empty"
+
     return jsonify({
-        "desk": desk_status,
-        "distance": "45 cm" if desk_status == "Occupied" else "> 80 cm",
-        "last_updated": "Just now"
+        "desk": status,
+        "distance": "45 cm" if status=="Occupied" else "No person",
+        "device": "Arduino Uno",
+        "location": "Lab 1"
     })
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
