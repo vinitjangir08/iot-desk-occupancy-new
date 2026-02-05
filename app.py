@@ -28,13 +28,10 @@ def team():
 def get_status():
     global status
     status = "Occupied" if status == "Empty" else "Empty"
+    return jsonify({"desk": status})
 
-    return jsonify({
-        "desk": status,
-        "distance": "45 cm" if status=="Occupied" else "No person",
-        "device": "Arduino Uno",
-        "location": "Lab 1"
-    })
-
+# IMPORTANT FOR RENDER
+import os
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
